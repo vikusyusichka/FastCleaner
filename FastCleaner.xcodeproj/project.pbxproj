@@ -12,6 +12,11 @@
 		E30094F12F38FCC600BB8B3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E30094E52F38FCC600BB8B3B /* Assets.xcassets */; };
 		E30094F32F38FCC600BB8B3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E30094E82F38FCC600BB8B3B /* LaunchScreen.storyboard */; };
 		E30094FB2F38FE2A00BB8B3B /* PhotoAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30094FA2F38FE2600BB8B3B /* PhotoAccessViewController.swift */; };
+		E3B8082A2F3ABDAF0049A09C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B808292F3ABDA60049A09C /* HomeViewController.swift */; };
+		E3B8082E2F3AC17B0049A09C /* PhotoAccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B8082D2F3AC1710049A09C /* PhotoAccessViewModel.swift */; };
+		E3B808302F3AC1B30049A09C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B8082F2F3AC1AB0049A09C /* HomeViewModel.swift */; };
+		E3B808322F3AC1E20049A09C /* PhotoPermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B808312F3AC1D70049A09C /* PhotoPermissionService.swift */; };
+		E3B808362F3AC3750049A09C /* PhotoPermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B808352F3AC3620049A09C /* PhotoPermissionStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		E30094EB2F38FCC600BB8B3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E30094F92F38FCF900BB8B3B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		E30094FA2F38FE2600BB8B3B /* PhotoAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAccessViewController.swift; sourceTree = "<group>"; };
+		E3B808292F3ABDA60049A09C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E3B8082D2F3AC1710049A09C /* PhotoAccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAccessViewModel.swift; sourceTree = "<group>"; };
+		E3B8082F2F3AC1AB0049A09C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E3B808312F3AC1D70049A09C /* PhotoPermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionService.swift; sourceTree = "<group>"; };
+		E3B808352F3AC3620049A09C /* PhotoPermissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPermissionStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		E30094ED2F38FCC600BB8B3B /* FastCleaner */ = {
 			isa = PBXGroup;
 			children = (
+				E3B808342F3AC3540049A09C /* Models */,
 				E30094F82F38FCDE00BB8B3B /* Features */,
 				E30094F72F38FCD700BB8B3B /* Services */,
 				E30094F62F38FCD200BB8B3B /* App */,
@@ -86,6 +97,7 @@
 		E30094F72F38FCD700BB8B3B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E3B808332F3AC1EE0049A09C /* PhotoPermission */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -93,9 +105,44 @@
 		E30094F82F38FCDE00BB8B3B /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				E30094FA2F38FE2600BB8B3B /* PhotoAccessViewController.swift */,
+				E3B8082C2F3AC0760049A09C /* PhotoAccess */,
+				E3B8082B2F3AC06D0049A09C /* Home */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		E3B8082B2F3AC06D0049A09C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E3B8082F2F3AC1AB0049A09C /* HomeViewModel.swift */,
+				E3B808292F3ABDA60049A09C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E3B8082C2F3AC0760049A09C /* PhotoAccess */ = {
+			isa = PBXGroup;
+			children = (
+				E3B8082D2F3AC1710049A09C /* PhotoAccessViewModel.swift */,
+				E30094FA2F38FE2600BB8B3B /* PhotoAccessViewController.swift */,
+			);
+			path = PhotoAccess;
+			sourceTree = "<group>";
+		};
+		E3B808332F3AC1EE0049A09C /* PhotoPermission */ = {
+			isa = PBXGroup;
+			children = (
+				E3B808312F3AC1D70049A09C /* PhotoPermissionService.swift */,
+			);
+			path = PhotoPermission;
+			sourceTree = "<group>";
+		};
+		E3B808342F3AC3540049A09C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3B808352F3AC3620049A09C /* PhotoPermissionStatus.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,9 +218,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B808322F3AC1E20049A09C /* PhotoPermissionService.swift in Sources */,
+				E3B8082E2F3AC17B0049A09C /* PhotoAccessViewModel.swift in Sources */,
+				E3B808302F3AC1B30049A09C /* HomeViewModel.swift in Sources */,
 				E30094EE2F38FCC600BB8B3B /* AppDelegate.swift in Sources */,
 				E30094FB2F38FE2A00BB8B3B /* PhotoAccessViewController.swift in Sources */,
+				E3B808362F3AC3750049A09C /* PhotoPermissionStatus.swift in Sources */,
 				E30094EF2F38FCC600BB8B3B /* SceneDelegate.swift in Sources */,
+				E3B8082A2F3ABDAF0049A09C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
